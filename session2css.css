@@ -1,0 +1,14 @@
+body {
+	text-align: center;
+	margin-top: 50px;
+}
+
+h1 {
+	color: red;
+}
+
+table {
+	width: 500px;
+	padding-top: 20px;
+	margin: 0px auto;
+}
