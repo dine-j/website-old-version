@@ -7,25 +7,15 @@ h1 {
 	color: red;
 }
 
-table {
-	width: 800px;
-	padding-top: 20px;
-	margin: 0px auto;
-}
-
-/*div {
+div {
 	max-width: 800px;
 	margin: 0 auto;
-	display: table;
 }
 
 section {
 	max-width: 400px;
 	float: left;
-	display: table-row;
+	display: inline-block;
 }
 
-a img {
-	position: relative;
-}*/
 
