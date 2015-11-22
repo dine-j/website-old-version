@@ -1,6 +1,7 @@
 body {
 	text-align: center;
 	margin-top: 50px;
+	background-color: #FAFCFF !important;
 }
 
 h1 {
@@ -10,12 +11,73 @@ h1 {
 div {
 	max-width: 800px;
 	margin: 0 auto;
+	vertical-align: middle;
+}
+
+p {
+	opacity: 0;
 }
 
 section {
-	max-width: 400px;
-	float: left;
-	display: inline-block;
+	border: 2px solid #D1DFFF;
+}
+
+.head {
+	margin: 15px;
+}
+
+.main-out {
+	background-color: #D1DFFF;
+}
+
+.main-in {
+	background-color: #FEFCFF;
+}
+
+.first-section {
+	padding-right: 0px !important;
+}
+
+.second-section {
+	padding-left: 0px !important;
+}
+
+.third-section {
+	padding-right: 0px !important;
+}
+
+.fourth-section {
+	padding-left: 0px !important;
+}
+
+.bottom {
+	margin: 15px;
+}
+
+.show-description p {
+	opacity: 1;
+}
+
+.show-description .col-md-6 div {
+
+}
+
+@media (max-width: 1000px) {
+	.first-section {
+		padding-right: 15px !important;
+}
+
+	.second-section {
+		padding-left: 15px !important;
+	}
+
+	.third-section {
+		padding-right: 15px !important;
+	}
+
+	.fourth-section {
+		padding-left: 15px !important;
+	}
 }
 
 
