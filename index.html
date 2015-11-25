@@ -54,9 +54,19 @@
 		</div>
 	</div>
 <script>
-$('section').on('click', function() {
+/*$('section').on('click', function() {
   $(this).toggleClass('show-description');
-  });
+  //$(this).parent('div').toggleClass('col-md-12');
+  });*/
+$('p').hide();
+$('div .first-section').on('click', function() {
+	$(this).children().children('p').show(1000);
+	$('div .second-section').hide(700);
+	$('div .third-section').hide(700);
+	$('div .fourth-section').hide(700);
+	$(this).removeClass('col-md-6');
+	$(this).addClass('col-md-12');
+	});
 //$('.main').corner("cc:#EFE6F8 bite keep 10px").parent().css('padding', '4px').corner("cc:#EFE6F8 bite keep 10px")
 $('.main-in').corner("round 15px").parent().css('padding', '8px').corner("bite 10px")
 </script>
