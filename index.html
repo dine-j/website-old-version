@@ -15,7 +15,7 @@
 
 		<div class="main-out"><div class="main-in">
 			<div class="row">
-				<div class="col-md-6 first-section">
+				<div class="first-section col-md-6">
 					<section>
 						<h3>Lorem Ipsum</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a semper lectus, eget pulvinar metus. Phasellus urna metus, pharetra ut tristique ac, commodo at eros. Phasellus interdum eget velit non condimentum. Nullam ac risus in sapien fermentum aliquet eu a magna. Etiam vitae risus vel ex dictum mollis. Integer in laoreet neque. Nunc vitae feugiat nunc. Nam gravida semper fringilla. </p>
@@ -60,12 +60,75 @@
   });*/
 $('p').hide();
 $('div .first-section').on('click', function() {
-	$(this).children().children('p').show(1000);
-	$('div .second-section').hide(700);
-	$('div .third-section').hide(700);
-	$('div .fourth-section').hide(700);
-	$(this).removeClass('col-md-6');
-	$(this).addClass('col-md-12');
+	if($(this).is('.col-md-6')) {
+		$(this).children().children('p').show(1000);
+		$('div .second-section').hide(700);
+		$('div .third-section').hide(700);
+		$('div .fourth-section').hide(700);
+		$(this).removeClass('col-md-6');
+		$(this).addClass('col-md-12');
+	} else {
+		$(this).children().children('p').hide(1000);
+		$('div .second-section').show(700);
+		$('div .third-section').show(700);
+		$('div .fourth-section').show(700);
+		$(this).removeClass('col-md-12');
+		$(this).addClass('col-md-6');
+	}
+	});
+
+$('div .second-section').on('click', function() {
+	if($(this).is('.col-md-6')) {
+		$(this).children().children('p').show(1000);
+		$('div .first-section').hide(700);
+		$('div .third-section').hide(700);
+		$('div .fourth-section').hide(700);
+		$(this).removeClass('col-md-6');
+		$(this).addClass('col-md-12');
+	} else {
+		$(this).children().children('p').hide(1000);
+		$('div .first-section').show(700);
+		$('div .third-section').show(700);
+		$('div .fourth-section').show(700);
+		$(this).removeClass('col-md-12');
+		$(this).addClass('col-md-6');
+	}
+	});
+
+$('div .third-section').on('click', function() {
+	if($(this).is('.col-md-6')) {
+		$(this).children().children('p').show(1000);
+		$('div .second-section').hide(700);
+		$('div .first-section').hide(700);
+		$('div .fourth-section').hide(700);
+		$(this).removeClass('col-md-6');
+		$(this).addClass('col-md-12');
+	} else {
+		$(this).children().children('p').hide(1000);
+		$('div .second-section').show(700);
+		$('div .first-section').show(700);
+		$('div .fourth-section').show(700);
+		$(this).removeClass('col-md-12');
+		$(this).addClass('col-md-6');
+	}
+	});
+
+$('div .fourth-section').on('click', function() {
+	if($(this).is('.col-md-6')) {
+		$(this).children().children('p').show(1000);
+		$('div .second-section').hide(700);
+		$('div .third-section').hide(700);
+		$('div .first-section').hide(700);
+		$(this).removeClass('col-md-6');
+		$(this).addClass('col-md-12');
+	} else {
+		$(this).children().children('p').hide(1000);
+		$('div .second-section').show(700);
+		$('div .third-section').show(700);
+		$('div .first-section').show(700);
+		$(this).removeClass('col-md-12');
+		$(this).addClass('col-md-6');
+	}
 	});
 //$('.main').corner("cc:#EFE6F8 bite keep 10px").parent().css('padding', '4px').corner("cc:#EFE6F8 bite keep 10px")
 $('.main-in').corner("round 15px").parent().css('padding', '8px').corner("bite 10px")
