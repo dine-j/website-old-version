@@ -5,7 +5,15 @@ body {
 }
 
 h1 {
-	color: red;
+
+}
+
+h3 {
+	font-family: 'Permanent Marker', cursive !important;
+}
+
+h5 {
+	font-family: 'Berkshire Swash', cursive !important;
 }
 
 div {
