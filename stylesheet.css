@@ -19,7 +19,7 @@ p {
 }
 
 section {
-	border: 2px solid #D1DFFF;
+	/*border: 2px solid #D1DFFF;*/
 }
 
 .head {
@@ -28,26 +28,72 @@ section {
 
 .main-out {
 	background-color: #D1DFFF;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: -15px;
+  	margin-left: -15px;
 }
 
 .main-in {
 	background-color: #FEFCFF;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: -15px;
+  	margin-left: -15px;
+}
+
+@media (min-width: 768px) {
+  .main-out {
+    width: 750px;
+  }
+  .main-in {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .main-out {
+    width: 970px;
+  }
+  .main-in {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-out {
+    width: 1170px;
+  }
+  .main-in {
+    width: 1170px;
+  }
+}
+
+.col-md-6 {
+	height: 200px;
+}
+
+.col-md-12 {
+	height: 400px;
 }
 
 .first-section {
-	padding-right: 0px !important;
+	/*padding-right: 0px !important;*/
+	border: 2px solid #D1DFFF;
+
 }
 
 .second-section {
-	padding-left: 0px !important;
+	/*padding-left: 0px !important;*/
+	border: 2px solid #D1DFFF;
 }
 
 .third-section {
-	padding-right: 0px !important;
+	/*padding-right: 0px !important;*/
+	border: 2px solid #D1DFFF;
 }
 
 .fourth-section {
-	padding-left: 0px !important;
+	/*padding-left: 0px !important;*/
+	border: 2px solid #D1DFFF;
 }
 
 .bottom {
@@ -58,14 +104,10 @@ section {
 	opacity: 1;
 }
 
-.show-description .col-md-6 div {
-
-}
-
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {
 	.first-section {
 		padding-right: 15px !important;
-}
+	}
 
 	.second-section {
 		padding-left: 15px !important;
@@ -79,5 +121,5 @@ section {
 		padding-left: 15px !important;
 	}
 }
-
+*/
 
