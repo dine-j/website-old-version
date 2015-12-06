@@ -12,7 +12,7 @@ h3 {
 	font-family: 'Permanent Marker', cursive !important;
 }
 
-h5 {
+#objectif {
 	font-family: 'Berkshire Swash', cursive !important;
 }
 
@@ -22,8 +22,9 @@ div {
 	vertical-align: middle;
 }
 
-p {
-	
+.content {
+	/*overflow: scroll;*/
+	text-align: justify;
 }
 
 section {

@@ -5,14 +5,15 @@
 	<script src="jquery.corner.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
 </head>
 
 <body>
 	<div class="container">
 		<div class="head">
-			<h1>Lorem Ipsum</h1>
-			<h2>Lorem Ipsum</h2>
-			<h5>Objectifs: </h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a semper lectus, eget pulvinar metus. Phasellus urna metus, pharetra ut tristique ac, commodo at eros. Phasellus interdum eget velit non condimentum.
+			<h1>Curriculum Vitae</h1>
+			<h2>Amandine Jala</h2>
+			<span id="objectif">Objectifs: </span>To find a <span>summer internship</span> for 2016 where I can apply my skills, and gain more experience
 		</div>
 
 		<div class="main-out">
@@ -20,16 +21,40 @@
 				<div class="row">
 					<div class="first-section col-md-6">
 						<section>
-							<h3>Lorem Ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a semper lectus, eget pulvinar metus. Phasellus urna metus, pharetra ut tristique ac, commodo at eros. Phasellus interdum eget velit non condimentum. Nullam ac risus in sapien fermentum aliquet eu a magna. Etiam vitae risus vel ex dictum mollis. Integer in laoreet neque. Nunc vitae feugiat nunc. Nam gravida semper fringilla. </p>
+							<h3>Education</h3>
+							<div class="content"><p>King’s College London, UK Expected 2019</p>
+							<ul><li>MSci Robotics and Intelligent System (Computer Science), 1st year</li></ul>
+							<p>Relevant modules: Java, Computer systems, Introduction to AI</p><br>
+
+							<p>University of California, Berkeley, USA 2015</p>
+							<ul><li>Business Administration Major</li></ul>
+							<p>Exchange Program, GPA 3.648</p><br>
+
+							<p>University of Bordeaux, Bordeaux, France 2011 to 2014</p>
+							<ul><li>Bachelor in Economics and Business Administration, European Economics and Policy</li></ul>
+							<p>High Honors, GPA 16.185/20</p>
+							</div>
 						</section>
 					</div>
 
 				
 					<div class="col-md-6 second-section">
 						<section>
-							<h3>Lorem Ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a semper lectus, eget pulvinar metus. Phasellus urna metus, pharetra ut tristique ac, commodo at eros. Phasellus interdum eget velit non condimentum. Nullam ac risus in sapien fermentum aliquet eu a magna. Etiam vitae risus vel ex dictum mollis. Integer in laoreet neque. Nunc vitae feugiat nunc. Nam gravida semper fringilla.</p>
+							<h3>Skills</h3>
+							<div class="content">Languages
+							<ul><li>French: Mother tongue</li>
+							<li>English: Fluent, IELTS 8.0</li>
+							<li>Japanese: Intermediate</li></ul>
+
+							Computer languages
+							<ul><li>Currently learning: C, Java, Assembly</li>
+							<li>Basics: VBA, HTML/CSS</li></ul>
+
+							Software
+							<ul><li>Microsoft Office: Word, Excel, PowerPoint</li>
+							<li>Graphic: Photoshop CC, Gimp 2.0</li>
+							</ul>
+							</div>
 						</section>
 					</div>
 				</div>
@@ -37,15 +62,25 @@
 				<div class="row">
 					<div class="col-md-6 third-section">
 						<section>
-							<h3>Lorem Ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a semper lectus, eget pulvinar metus. Phasellus urna metus, pharetra ut tristique ac, commodo at eros. Phasellus interdum eget velit non condimentum. Nullam ac risus in sapien fermentum aliquet eu a magna. Etiam vitae risus vel ex dictum mollis. Integer in laoreet neque. Nunc vitae feugiat nunc. Nam gravida semper fringilla. </p>
+							<h3>Experience</h3>
+							<div class="content">Commercial Assistant Internship, Sud Congrès Conseil, Bordeaux, France			May 2014 – July 2014
+							<ul><li>Set-up a market analysis to enable the company to enter Paris market</li>
+							<li>Participated in orchestrating international events for 600 scientists and researchers</li>
+							<li>Managed databases of potential customers: researchers , scientists and public laboratories</li>
+							<li>Wrote service specifications: events organization, dinners, excursions, goodies, fees, etc</li>
+							<li>Established a mailing model for the company and used it to make over 1,000 name badges</li></ul>
+
+							Accountant Shadowing, Adexsa Cabinet Denois, Marmande, France			June 2012
+							<ul><li>Familiarized with the accountant job by interviewing the employees and observing their daily tasks</li>
+							</ul>
+							</div>
 						</section>
 					</div>
 
 					<div class="col-md-6 fourth-section">
 						<section>
-							<h3>Lorem Ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a semper lectus, eget pulvinar metus. Phasellus urna metus, pharetra ut tristique ac, commodo at eros. Phasellus interdum eget velit non condimentum. Nullam ac risus in sapien fermentum aliquet eu a magna. Etiam vitae risus vel ex dictum mollis. Integer in laoreet neque. Nunc vitae feugiat nunc. Nam gravida semper fringilla. </p>
+							<h3>General Activities</h3>
+							<div class="content">Wing Chun Kung Fu, King’s College Student Association</div>
 						</section>
 					</div>
 				</div>
@@ -58,7 +93,7 @@
 		</div>
 	</div>
 <script>
-$('p').hide();
+$('div .content').hide();
 $('div .first-section').on('click', function() {
 	if($(this).is('.col-md-6')) {
 		$(this).removeClass('col-md-6');
@@ -66,9 +101,9 @@ $('div .first-section').on('click', function() {
 		$('div .third-section').hide(700);
 		$('div .fourth-section').hide(700);
 		$(this).addClass('col-md-12');
-		$(this).children().children('p').show(1000);
+		$('div .content').show(1000);
 	} else {
-		$(this).children().children('p').hide(200);
+		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
 		$(this).addClass('col-md-6');
 		$('div .second-section').show(700);
@@ -84,9 +119,9 @@ $('div .second-section').on('click', function() {
 		$('div .third-section').hide(700);
 		$('div .fourth-section').hide(700);
 		$(this).addClass('col-md-12');
-		$(this).children().children('p').show(1000);
+		$('div .content').show(1000);
 	} else {
-		$(this).children().children('p').hide(200);
+		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
 		$(this).addClass('col-md-6');
 		$('div .first-section').show(700);
@@ -102,9 +137,9 @@ $('div .third-section').on('click', function() {
 		$('div .first-section').hide(700);
 		$('div .fourth-section').hide(700);
 		$(this).addClass('col-md-12');
-		$(this).children().children('p').show(1000);
+		$('div .content').show(1000);
 	} else {
-		$(this).children().children('p').hide(200);
+		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
 		$(this).addClass('col-md-6');
 		$('div .second-section').show(700);
@@ -120,9 +155,9 @@ $('div .fourth-section').on('click', function() {
 		$('div .third-section').hide(700);
 		$('div .first-section').hide(700);
 		$(this).addClass('col-md-12');
-		$(this).children().children('p').show(1000);
+		$('div .content').show(1000);
 	} else {
-		$(this).children().children('p').hide(200);
+		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
 		$(this).addClass('col-md-6');
 		$('div .second-section').show(700);
@@ -130,8 +165,6 @@ $('div .fourth-section').on('click', function() {
 		$('div .first-section').show(700);
 	}
 	});
-//$('.main').corner("cc:#EFE6F8 bite keep 10px").parent().css('padding', '4px').corner("cc:#EFE6F8 bite keep 10px")
-/*$('.main-in').corner("round 15px").parent().css('padding', '8px').corner("bite 10px")*/
 </script>
 </body>
 
