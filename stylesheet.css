@@ -46,9 +46,29 @@ div {
 
 .content {
 	text-align: justify;
-	height: 80%;
 	margin: 20px auto;
 	overflow: auto;
+}
+
+.elevator::-webkit-scrollbar { 
+  width: 5px; /*largeur de la scrollbar verticale*/
+  height: 5px; /*hauteur de la scrollbar horizontale*/
+  background-color: #000000;
+}
+
+.elevator::-webkit-scrollbar-track { 
+  background-color: #BDBDBD; /*couleur du fond de la scrollbar*/
+}
+
+.elevator::-webkit-scrollbar-thumb { /*la petite bande qui monte/descend*/
+  background-color: #2E64FE; /*couleur de l'ascenseur*/;
+  border-radius: 15px;
+  /*-moz-border-radius: 15px;
+  -webkit-border-radius: 15px;*/
+}
+
+.element {
+	padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
@@ -126,6 +146,10 @@ div {
 		height: 400px;
 		border: 7px solid #D1DFFF;
 		border-radius: 15px;
+	}
+
+	.content {
+		height: 80%;
 	}
 }
 
