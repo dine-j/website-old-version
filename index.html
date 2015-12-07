@@ -4,7 +4,7 @@
 	<link rel="icon" href="profile.jpg" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="jquery.js"></script>
 	<script src="jquery.corner.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
@@ -27,8 +27,7 @@
 				<div class="row">
 					<div class="first-section col-md-6">
 						<section>
-							<i class="fa fa-arrow-left"></i>
-							<h3>Education</h3>
+							<h3><i class="fa fa-arrow-left pull-left"></i> Education</h3>
 							<div class="content-image"><img src="education-image.png"></img></div>
 							<div class="content elevator">
 								<div class ="element">
@@ -146,6 +145,7 @@
 	</div>
 <script>
 $('div .content').hide();
+$('i').hide();
 $('div .first-section').on('click', function() {
 	if($(this).is('.col-md-6')) {
 		$('div .first-section .content-image').hide(700);
@@ -157,6 +157,7 @@ $('div .first-section').on('click', function() {
 		}
 		$(this).addClass('col-md-12');
 		$('div .first-section .content').show(1000);
+		$('i').show();
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');

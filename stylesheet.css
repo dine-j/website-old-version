@@ -38,6 +38,10 @@ div {
 	vertical-align: middle;
 }
 
+div .col-md-6:hover {
+	background-color: #FFFFFF !important;
+}
+
 .content-image img {
 	max-width: 200px;
 	max-height: 100px;
