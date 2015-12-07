@@ -64,7 +64,7 @@
 				
 					<div class="col-md-6 second-section">
 						<section>
-							<h3>Skills</h3>
+							<h3><i class="fa fa-arrow-left pull-left"></i> Skills</h3>
 							<div class="content-image"><img src="skill.png"></img></div>
 							<div class="content elevator">
 								<div class="element">
@@ -99,7 +99,7 @@
 				<div class="row">
 					<div class="col-md-6 third-section">
 						<section>
-							<h3>Experience</h3>
+							<h3><i class="fa fa-arrow-left pull-left"></i> Experience</h3>
 							<div class="content-image"><img src="experience.png"></img></div>
 							<div class="content elevator">
 								<div class="element">
@@ -127,7 +127,7 @@
 
 					<div class="col-md-6 fourth-section">
 						<section>
-							<h3>General Activities</h3>
+							<h3><i class="fa fa-arrow-left pull-left"></i> General Activities</h3>
 							<div class="content-image"><img src="activites.png"></img></div>
 							<div class="content elevator">
 								<strong>Wing Chun Kung Fu,</strong> King’s College Student Association
@@ -166,6 +166,7 @@ $('div .first-section').on('click', function() {
 		$('div .third-section').show(700);
 		$('div .fourth-section').show(700);
 		$('div .content-image').show(700);
+		$('i').hide();
 	}
 	});
 
@@ -181,6 +182,7 @@ $('div .second-section').on('click', function() {
 		}
 		$(this).addClass('col-md-12');
 		$('div .second-section .content').show(1000);
+		$('i').show();
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -189,6 +191,7 @@ $('div .second-section').on('click', function() {
 		$('div .third-section').show(700);
 		$('div .fourth-section').show(700);
 		$('div .content-image').show(700);
+		$('i').hide();
 	}
 	});
 
@@ -204,6 +207,7 @@ $('div .third-section').on('click', function() {
 		}
 		$(this).addClass('col-md-12');
 		$('div .third-section .content').show(1000);
+		$('i').show();
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -212,6 +216,7 @@ $('div .third-section').on('click', function() {
 		$('div .first-section').show(700);
 		$('div .fourth-section').show(700);
 		$('div .content-image').show(700);
+		$('i').hide();
 	}
 	});
 
@@ -227,6 +232,7 @@ $('div .fourth-section').on('click', function() {
 		}
 		$(this).addClass('col-md-12');
 		$('div .fourth-section .content').show(1000);
+		$('i').show();
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -235,6 +241,7 @@ $('div .fourth-section').on('click', function() {
 		$('div .third-section').show(700);
 		$('div .first-section').show(700);
 		$('div .content-image').show(700);
+		$('i').hide();
 	}
 	});
 </script>
