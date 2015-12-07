@@ -4,16 +4,32 @@ body {
 	background-color: #FAFCFF !important;
 }
 
-h1 {
+.head {
+	margin: 30px;
+}
 
+h1 {
+	font-family: 'Corben', cursive !important;
+	font-weight: bold !important;
+}
+
+h2 {
+	font-family: 'Carter One', cursive !important;
+	padding-bottom: 10px;
 }
 
 h3 {
 	font-family: 'Permanent Marker', cursive !important;
 }
 
+h3:hover {
+	font-style: italic;
+	cursor: pointer
+}
+
 #objectif {
 	font-family: 'Berkshire Swash', cursive !important;
+	font-size: 17px;
 }
 
 div {
@@ -22,59 +38,18 @@ div {
 	vertical-align: middle;
 }
 
+.content-image img {
+	max-width: 200px;
+	max-height: 100px;
+	padding: 10px;
+}
+
 .content {
-	/*overflow: scroll;*/
 	text-align: justify;
+	height: 80%;
+	margin: 20px auto;
+	overflow: auto;
 }
-
-section {
-	/*border: 2px solid #D1DFFF;*/
-}
-
-.head {
-	margin: 15px;
-}
-
-/*.main-out {
-	background-color: #D1DFFF;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-  	margin-left: auto;
-}
-
-.main-in {
-	background-color: #FEFCFF;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: -15px;
-  	margin-left: -15px;
-}
-
-@media (min-width: 768px) {
-  .main-out {
-    width: 750px;
-  }
-  .main-in {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .main-out {
-    width: 970px;
-  }
-  .main-in {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-out {
-    width: 1170px;
-  }
-  .main-in {
-    width: 1170px;
-  }
-}*/
 
 @media (min-width: 768px) {
 	.container {
@@ -161,23 +136,3 @@ section {
 .show-description p {
 	opacity: 1;
 }
-
-/*@media (max-width: 1000px) {
-	.first-section {
-		padding-right: 15px !important;
-	}
-
-	.second-section {
-		padding-left: 15px !important;
-	}
-
-	.third-section {
-		padding-right: 15px !important;
-	}
-
-	.fourth-section {
-		padding-left: 15px !important;
-	}
-}
-*/
-

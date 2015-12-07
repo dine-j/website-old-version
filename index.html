@@ -5,6 +5,8 @@
 	<script src="jquery.corner.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Corben:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css'>
 	<meta charset="UTF-8">
 </head>
 
@@ -13,7 +15,7 @@
 		<div class="head">
 			<h1>Curriculum Vitae</h1>
 			<h2>Amandine Jala</h2>
-			<span id="objectif">Objectifs: </span>To find a <span>summer internship</span> for 2016 where I can apply my skills, and gain more experience
+			<p><span id="objectif">Objectifs: </span>To find a <strong>summer internship</strong> for 2016 where I can apply my skills, and gain more experience</p>
 		</div>
 
 		<div class="main-out">
@@ -22,17 +24,27 @@
 					<div class="first-section col-md-6">
 						<section>
 							<h3>Education</h3>
-							<div class="content"><p>King’s College London, UK Expected 2019</p>
-							<ul><li>MSci Robotics and Intelligent System (Computer Science), 1st year</li></ul>
-							<p>Relevant modules: Java, Computer systems, Introduction to AI</p><br>
+							<div class="content-image"><img src="education-image.png"></img></div>
+							<div class="content">
+								<p><strong>King’s College London, UK</strong>
+								<div class="pull-right">Expected 2019</div></p>
+								<ul><li>MSci Robotics and Intelligent System (Computer Science), 1st year</li></ul>
+								<p>Relevant modules: Java, Computer systems, Introduction to AI</p><br>
 
-							<p>University of California, Berkeley, USA 2015</p>
-							<ul><li>Business Administration Major</li></ul>
-							<p>Exchange Program, GPA 3.648</p><br>
+								<p><strong>University of California, Berkeley, USA</strong>
+								<div class="pull-right">2015</div></p>
+								<ul><li>Business Administration Major</li></ul>
+								<p>Exchange Program, GPA 3.648</p><br>
 
-							<p>University of Bordeaux, Bordeaux, France 2011 to 2014</p>
-							<ul><li>Bachelor in Economics and Business Administration, European Economics and Policy</li></ul>
-							<p>High Honors, GPA 16.185/20</p>
+								<p><strong>University of Bordeaux, Bordeaux, France</strong> 
+								<div class="pull-right">2011 to 2014</div></p>
+								<ul><li>Bachelor in Economics and Business Administration, European Economics and Policy</li></ul>
+								<p>High Honors, GPA 16.185/20</p>
+
+								<p><strong>University of Bordeaux, Bordeaux, France</strong> 
+								<div class="pull-right">2011 to 2014</div></p>
+								<ul><li>Bachelor in Economics and Business Administration, European Economics and Policy</li></ul>
+								<p>High Honors, GPA 16.185/20</p>
 							</div>
 						</section>
 					</div>
@@ -41,16 +53,17 @@
 					<div class="col-md-6 second-section">
 						<section>
 							<h3>Skills</h3>
-							<div class="content">Languages
+							<div class="content-image"><img src="skill.png"></img></div>
+							<div class="content"><strong>Languages</strong> 
 							<ul><li>French: Mother tongue</li>
 							<li>English: Fluent, IELTS 8.0</li>
 							<li>Japanese: Intermediate</li></ul>
 
-							Computer languages
+							<strong>Computer languages</strong> 
 							<ul><li>Currently learning: C, Java, Assembly</li>
 							<li>Basics: VBA, HTML/CSS</li></ul>
 
-							Software
+							<strong>Software</strong> 
 							<ul><li>Microsoft Office: Word, Excel, PowerPoint</li>
 							<li>Graphic: Photoshop CC, Gimp 2.0</li>
 							</ul>
@@ -63,14 +76,17 @@
 					<div class="col-md-6 third-section">
 						<section>
 							<h3>Experience</h3>
-							<div class="content">Commercial Assistant Internship, Sud Congrès Conseil, Bordeaux, France			May 2014 – July 2014
+							<div class="content-image"><img src="experience.png"></img></div>
+							<div class="content"><strong>Commercial Assistant Internship,</strong> Sud Congrès Conseil, Bordeaux, France
+							<div class="pull-right">May 2014 – July 2014</div>
 							<ul><li>Set-up a market analysis to enable the company to enter Paris market</li>
 							<li>Participated in orchestrating international events for 600 scientists and researchers</li>
 							<li>Managed databases of potential customers: researchers , scientists and public laboratories</li>
 							<li>Wrote service specifications: events organization, dinners, excursions, goodies, fees, etc</li>
 							<li>Established a mailing model for the company and used it to make over 1,000 name badges</li></ul>
 
-							Accountant Shadowing, Adexsa Cabinet Denois, Marmande, France			June 2012
+							<strong>Accountant Shadowing,</strong> Adexsa Cabinet Denois, Marmande, France
+							<div class="pull-right">June 2012</div>
 							<ul><li>Familiarized with the accountant job by interviewing the employees and observing their daily tasks</li>
 							</ul>
 							</div>
@@ -80,7 +96,8 @@
 					<div class="col-md-6 fourth-section">
 						<section>
 							<h3>General Activities</h3>
-							<div class="content">Wing Chun Kung Fu, King’s College Student Association</div>
+							<div class="content-image"><img src="activites.png"></img></div>
+							<div class="content"><strong>Wing Chun Kung Fu,</strong> King’s College Student Association</div>
 						</section>
 					</div>
 				</div>
@@ -96,12 +113,15 @@
 $('div .content').hide();
 $('div .first-section').on('click', function() {
 	if($(this).is('.col-md-6')) {
+		$('div .first-section .content-image').hide(700);
 		$(this).removeClass('col-md-6');
-		$('div .second-section').hide(700);
-		$('div .third-section').hide(700);
-		$('div .fourth-section').hide(700);
+		if(window.matchMedia('(min-width: 1200px)').matches) {
+			$('div .second-section').hide(700);
+			$('div .third-section').hide(700);
+			$('div .fourth-section').hide(700);
+		}
 		$(this).addClass('col-md-12');
-		$('div .content').show(1000);
+		$('div .first-section .content').show(1000);
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -109,17 +129,22 @@ $('div .first-section').on('click', function() {
 		$('div .second-section').show(700);
 		$('div .third-section').show(700);
 		$('div .fourth-section').show(700);
+		$('div .content-image').show(700);
 	}
 	});
 
 $('div .second-section').on('click', function() {
 	if($(this).is('.col-md-6')) {
 		$(this).removeClass('col-md-6');
-		$('div .first-section').hide(700);
-		$('div .third-section').hide(700);
-		$('div .fourth-section').hide(700);
+		$('div .second-section .content-image').hide(700);
+		if(window.matchMedia('(min-width: 1200px)').matches)
+		{
+			$('div .first-section').hide(700);
+			$('div .third-section').hide(700);
+			$('div .fourth-section').hide(700);
+		}
 		$(this).addClass('col-md-12');
-		$('div .content').show(1000);
+		$('div .second-section .content').show(1000);
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -127,17 +152,22 @@ $('div .second-section').on('click', function() {
 		$('div .first-section').show(700);
 		$('div .third-section').show(700);
 		$('div .fourth-section').show(700);
+		$('div .content-image').show(700);
 	}
 	});
 
 $('div .third-section').on('click', function() {
 	if($(this).is('.col-md-6')) {
 		$(this).removeClass('col-md-6');
-		$('div .second-section').hide(700);
-		$('div .first-section').hide(700);
-		$('div .fourth-section').hide(700);
+		$('div .third-section .content-image').hide(700);
+		if(window.matchMedia('(min-width: 1200px)').matches)
+		{
+			$('div .second-section').hide(700);
+			$('div .first-section').hide(700);
+			$('div .fourth-section').hide(700);
+		}
 		$(this).addClass('col-md-12');
-		$('div .content').show(1000);
+		$('div .third-section .content').show(1000);
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -145,17 +175,22 @@ $('div .third-section').on('click', function() {
 		$('div .second-section').show(700);
 		$('div .first-section').show(700);
 		$('div .fourth-section').show(700);
+		$('div .content-image').show(700);
 	}
 	});
 
 $('div .fourth-section').on('click', function() {
 	if($(this).is('.col-md-6')) {
 		$(this).removeClass('col-md-6');
-		$('div .second-section').hide(700);
-		$('div .third-section').hide(700);
-		$('div .first-section').hide(700);
+		$('div .fourth-section .content-image').hide(700);
+		if(window.matchMedia('(min-width: 1200px)').matches)
+		{
+			$('div .second-section').hide(700);
+			$('div .third-section').hide(700);
+			$('div .first-section').hide(700);
+		}
 		$(this).addClass('col-md-12');
-		$('div .content').show(1000);
+		$('div .fourth-section .content').show(1000);
 	} else {
 		$('div .content').hide(200);
 		$(this).removeClass('col-md-12');
@@ -163,6 +198,7 @@ $('div .fourth-section').on('click', function() {
 		$('div .second-section').show(700);
 		$('div .third-section').show(700);
 		$('div .first-section').show(700);
+		$('div .content-image').show(700);
 	}
 	});
 </script>
