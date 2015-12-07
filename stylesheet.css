@@ -44,6 +44,10 @@ div {
 	padding: 10px;
 }
 
+.content-image img:hover {
+	cursor: pointer;
+}
+
 .content {
 	text-align: justify;
 	margin: 20px auto;
