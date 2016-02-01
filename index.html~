@@ -253,6 +253,7 @@ $('div .fourth-section').on('click', function() {
 
   ga('create', 'UA-73201405-1', 'auto');
   ga('send', 'pageview');
+
 </script>
 </body>
 
