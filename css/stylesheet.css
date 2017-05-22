@@ -44,6 +44,10 @@ button {
  	background-color: transparent;
 }
 
+button:focus {
+	outline: 0;
+}
+
 .content {
 	text-align: justify;
 	margin: 40px auto;
