@@ -48,6 +48,12 @@ div {
 	vertical-align: middle;
 }
 
+button {
+	border: none;
+	background-color: transparent;
+	
+}
+
 .nav-bar {
 	display: block;
 }
@@ -69,7 +75,6 @@ div .col-md-6:hover {
 .content {
 	text-align: justify;
 	margin: 20px auto;
-	overflow: auto;
 }
 
 .elevator::-webkit-scrollbar { 
@@ -102,7 +107,7 @@ div .col-md-6:hover {
 		width: 750px;
 	}*/
 
-	.first-section {
+	/*.first-section {
 		border: 2px solid #D1DFFF;
 		border-left: 7px solid #D1DFFF;
 		border-top: 7px solid #D1DFFF;
@@ -130,7 +135,7 @@ div .col-md-6:hover {
 		border-left: 7px solid #D1DFFF;
 		border-bottom-right-radius: 15px;
 		border-bottom-left-radius: 15px;
-	}
+	}*/
 }
 
 @media (min-width: 992px) {
@@ -142,7 +147,7 @@ div .col-md-6:hover {
 		width: 970px;
 	}*/
 
-	.first-section {
+	/*.first-section {
 		border: 2px solid #D1DFFF;
 		border-left: 7px solid #D1DFFF;
 		border-top: 7px solid #D1DFFF;
@@ -170,7 +175,7 @@ div .col-md-6:hover {
 		border-bottom: 7px solid #D1DFFF;
 		border-bottom-right-radius: 15px;
 		border-bottom-left-radius: 0px;
-	}
+	}*/
 
 	.col-md-12 {
 		height: 400px;
@@ -178,9 +183,9 @@ div .col-md-6:hover {
 		border-radius: 15px;
 	}
 
-	.content {
+	/*.content {
 		height: 80%;
-	}
+	}*/
 }
 
 @media (min-width: 1200px) {
