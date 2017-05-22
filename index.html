@@ -28,19 +28,19 @@
 		</div>
 		
 		<div class="nav-bar">
-			<button class="col-md-3" onclick="showAbout()">
+			<button class="col-md-3 about" id="current-section" onclick="showAbout()">
 				<h3>About</h3>
 			</button>
 
-			<button class="col-md-3" onclick="showEducation()">
+			<button class="col-md-3 education" onclick="showEducation()">
 				<h3>Education</h3>
 			</button>
 			
-			<button class="col-md-3" onclick="showSkills()">
+			<button class="col-md-3 skills" onclick="showSkills()">
 				<h3>Skills</h3>
 			</button>
 			
-			<button class="col-md-3" onclick="showExperience()">
+			<button class="col-md-3 experience" onclick="showExperience()">
 				<h3>Experience</h3>
 			</button>
 		</div>
@@ -183,6 +183,8 @@
 		$('div .content .experience').hide();
 		
 		function showAbout() {
+			$('button#current-section').removeAttr('id');
+			$('button.about').attr('id', 'current-section');
 			$('div .content .about').show(700);
 			$('div .content .education').hide(700);
 			$('div .content .skills').hide(700);
@@ -190,6 +192,8 @@
 		}
 		
 		function showEducation() {
+			$('button#current-section').removeAttr('id');
+			$('button.education').attr('id', 'current-section');
 			$('div .content .about').hide(700);
 			$('div .content .education').show(700);
 			$('div .content .skills').hide(700);
@@ -197,6 +201,8 @@
 		}
 		
 		function showSkills() {
+			$('button#current-section').removeAttr('id');
+			$('button.skills').attr('id', 'current-section');
 			$('div .content .about').hide(700);
 			$('div .content .education').hide(700);
 			$('div .content .skills').show(700);
@@ -204,10 +210,16 @@
 		}
 		
 		function showExperience() {
+			$('button#current-section').removeAttr('id');
+			$('button.experience').attr('id', 'current-section');
 			$('div .content .about').hide(700);
 			$('div .content .education').hide(700);
 			$('div .content .skills').hide(700);
 			$('div .content .experience').show(700);
+		}
+		
+		function removeCurrentSection() {
+			$('button#current-section').removeAttr('id');
 		}
 	</script>
 	<script>

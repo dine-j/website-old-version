@@ -48,28 +48,18 @@ div {
 	vertical-align: middle;
 }
 
-button {
-	border: none;
-	background-color: transparent;
-	
-}
-
 .nav-bar {
 	display: block;
 }
 
-div .col-md-6:hover {
-	background-color: #F4FFF3 !important;
+button {
+	border: none;
+ 	background-color: transparent;
 }
 
-.content-image img {
-	max-width: 200px;
-	max-height: 100px;
-	padding: 10px;
-}
-
-.content-image img:hover {
-	cursor: pointer;
+#current-section {
+	background: url("../media/arrow-nav-bar.png") no-repeat;
+	background-position: center bottom, center bottom;
 }
 
 .content {
