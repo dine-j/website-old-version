@@ -3,6 +3,13 @@ html, body, footer, .container {
 	min-height: 100%;
 }
 
+@media (min-height: 640px) {
+	html, body, footer, .container {
+		height: 100%;
+		min-height: 100%;
+	}
+}
+
 body {
 	background: url("../media/background.png");
 	background-position: center top, center top;
@@ -33,9 +40,8 @@ h2 {
 }
 
 .header-image {
-	max-width: inherit;
+	max-width: 100%;
 	margin: auto;
-	padding-right: 30px;
 }
 
 h3 {
@@ -154,7 +160,7 @@ button {
 .bottom {
 	margin: 15px;
 	bottom: 0;
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	margin-left: auto;
