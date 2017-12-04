@@ -89,6 +89,10 @@ button:focus {
 	padding-bottom: 15px;
 }
 
+.company-logo {
+	display: none;
+}
+
 @media (min-width: 320px) { /*Mobile S*/
 	.head {
 		margin: 40px 15px 10px 15px;
@@ -186,6 +190,7 @@ button:focus {
 	
 	.container {
 		width: 750px;
+		height: auto;
 		background-color: white;
 	}
 	
@@ -260,6 +265,12 @@ button:focus {
 	
 	.dates {
 		float: right;
+	}
+	
+	.company-logo {
+		width: 60px;
+		display: block;
+		margin: auto;
 	}
 }
 
