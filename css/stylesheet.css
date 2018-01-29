@@ -272,6 +272,30 @@ button:focus {
 		display: block;
 		margin: auto;
 	}
+
+	.chatbox {
+		background-color: white;
+		position: absolute;
+		float: right;
+		right: 40 !important;
+		bottom: 0!important;
+		height: 740px !important;
+		max-height: 100% !important;
+		width: 400px !important;
+		box-shadow: 1px 1px 12px #555;
+	}
+
+	.chatbox-titlebar {
+		background-color: white;
+		border-bottom: 2px solid rgb(77, 166, 255);
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	.chatbox-title {
+
+	}
+
 }
 
 .bottom {
