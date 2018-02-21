@@ -68,18 +68,18 @@ button:focus {
 	position: relative;
 }
 
-.elevator::-webkit-scrollbar { 
+.chatbox-inside::-webkit-scrollbar { 
 	width: 5px; /*largeur de la scrollbar verticale*/
 	height: 5px; /*hauteur de la scrollbar horizontale*/
 	background-color: #000000;
 }
 
-.elevator::-webkit-scrollbar-track { 
+.chatbox-inside::-webkit-scrollbar-track { 
 	background-color: #BDBDBD; /*couleur du fond de la scrollbar*/
 }
 
-.elevator::-webkit-scrollbar-thumb { /*la petite bande qui monte/descend*/
-	background-color: #2E64FE; /*couleur de l'ascenseur*/
+.chatbox-inside::-webkit-scrollbar-thumb { /*la petite bande qui monte/descend*/
+	background-color: rgb(77, 166, 255); /*couleur de l'ascenseur*/
 	border-radius: 15px;
 	/*-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;*/
@@ -279,7 +279,6 @@ button:focus {
 		float: right;
 		right: 40 !important;
 		bottom: 0!important;
-		height: 740px !important;
 		max-height: 100% !important;
 		width: 400px !important;
 		box-shadow: 1px 1px 12px #555;
@@ -288,12 +287,106 @@ button:focus {
 	.chatbox-titlebar {
 		background-color: white;
 		border-bottom: 2px solid rgb(77, 166, 255);
-		padding-left: 10px;
-		padding-top: 10px;
+		padding: 10px;
+		display: inline-flex;
+		min-width: 100%;
 	}
 
 	.chatbox-title {
+		max-width: 80%;
+		margin: auto auto auto 0px !important;
+	}
 
+	.chatbox-button {
+		color: rgb(77, 166, 255);
+		font-weight: 1000;
+		border: rgb(77, 166, 255) 2px solid;
+		margin: auto 10px auto auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.chatbox-inside {
+		padding: 10px;
+		max-height: 500px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	.chatbox-form {
+		padding: 10px;
+	}
+
+	.user-input-form {
+		display: inline-flex;
+		width: 100%;
+		max-width: 380px;
+		bottom: 0;
+		margin: 0 !important;
+	}
+
+	.user-input {
+		width: 100%;
+	}
+
+	.send-chat {
+
+	}
+
+	.chatbubble {
+		min-height: 32px;
+		min-width: 380px;
+		overflow: hidden;
+	}
+
+	.user-bubble {
+		margin-bottom: 3px;
+		/*box-sizing: border-box;*/
+		float: right;
+		width: auto;
+		max-width: 80%;
+		/*position: relative;*/
+		font-weight: 900;
+
+		background-color: rgb(77, 166, 255);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+
+		padding: 6px 20px;
+		color: white;
+		text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+		word-wrap: break-word;
+		clear:both
+	}
+
+	.bot-bubble {
+		display: inline-flex;
+		margin-bottom: 3px;
+		/*float: left;*/
+		width: auto;
+		max-width: 80%;
+
+		border: 2px solid rgb(77, 166, 255);
+		-webkit-border-radius: 50px 10px 10px 50px;
+		-moz-border-radius: 50px 10px 10px 50px;
+		border-radius: 50px 10px 10px 50px;
+
+		word-wrap: break-word;
+	}
+
+	.bot-pic {
+		width: 95px;
+		height: 95px;
+		border: 1px solid black;
+		padding: 1px;
+		border-radius: 50%;
+	}
+
+	.bot-text {
+		font-weight: 900;
+		padding: 0 20px 0 20px;
+		margin: auto;
 	}
 
 }

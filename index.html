@@ -227,27 +227,41 @@
 	<div class="chatbox">
 		<div class="chatbox-titlebar">
 			<p class="chatbox-title">Chatbox</p>
+			<button class="chatbox-button" onclick="openCloseChatbox()">-</button>
 		</div>
-	 	<p class="datestamp">May 20, 2014, 4:16 PM</p>
-	 
-		<div class="bubble">
-			<p>Hey how's it going?</p>
-		</div>
-	 
-		<div class="bubble bubble-alt green">
-			<p>Just sending out random SMS to people</p>
-		</div>
+		<div class="chatbox-inside">
+			<div class="chatbubble">
+				<p class="user-bubble">Hey how's it going?</p>
+			</div>
 
-		<div class="bubble">
-			<p>Cool, cool.</p>
-		</div>
+			<div class="chatbubble">
+				<div class="bot-bubble">
+					<img class="bot-pic" src="media/Sisilala-Overdrive-NIL-profile.png" />
+					<p class="bot-text">Just sending out random SMS to people</p>
+				</div>
+			</div>
 
-		<div class="bubble">
-			<p>Sometimes I do that too. Like right now.</p>
-		</div>
+			<div class="chatbubble">
+				<p class="user-bubble">Cool, cool.</p>
+			</div>
 
-		<div class="bubble bubble-alt white">
-			<p>So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+			<div class="chatbubble">
+				<div class="bot-bubble">
+					<img class="bot-pic" src="media/Sisilala-Overdrive-NIL-profile.png" />
+					<p class="bot-text">Sometimes I do that too. Like right now.</p>
+				</div>
+			</div>
+
+			<div class="chatbubble">
+				<p class="user-bubble">So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
+			</div>
+			
+		</div>
+		<div class="chatbox-form">
+			<form action="http://127.0.0.1:5000/chat" method="post" class="user-input-form" id="sendMessage">
+					<input name="message" type="text" class="user-input" autocomplete="off">
+					<input type="submit" value="Send" class="send-chat">
+			</form>
 		</div>
 	</div>
 
@@ -255,6 +269,7 @@
 		$('div .content .education').hide();
 		$('div .content .skills').hide();
 		$('div .content .experience').hide();
+		// $('div .chatbox-inside').hide();
 		
 		function showAbout() {
 			$('button#current-section').removeAttr('id');
@@ -295,6 +310,54 @@
 		function removeCurrentSection() {
 			$('button#current-section').removeAttr('id');
 		}
+
+		function openCloseChatbox() {
+			$('div .chatbox-inside').slideToggle(400, "linear", function() {
+				$('div .chatbox-inside').height(450);
+			});
+		}
+
+		// $('#submit').click(function() {
+		//     $.ajax({
+		//         url: 'http://127.0.0.1:5000/chat',
+		//         type: 'POST',
+		//         data: {
+		//             message: 'hello world!'
+		//         },
+		//         success: function(msg) {
+		//             alert('Email Sent');
+		//         }               
+		//     });
+		// });
+
+		$('#sendMessage').submit(function(event) {
+			// Stop form from submitting normally
+			event.preventDefault();
+
+			// Get some values from elements on the page:
+			var $form = $( this ),
+			msg = $form.find( "input[name='message']" ).val(),
+			url = $form.attr( "action" );
+
+			$form.find( "input[name='message']" ).val("");
+
+			// $('.user-input-form').reset();
+
+			// $('.user-input').value = "";
+			$('.chatbox-inside').append('<div class=\"chatbubble\"><p class=\'user-bubble\'>'+msg+'</div></div>');
+
+			// Send the data using post
+			var posting = $.post( url, { message: msg } );
+
+			var botBubble = '<div class=\"chatbubble\"><div class=\"bot-bubble\"><img class=\"bot-pic\" src=\"media/Sisilala-Overdrive-NIL-profile.png\" /><p class=\"bot-text\">'
+
+			// Put the results in a div
+			posting.done(function( data ) {
+				oldscrollHeight = $('.chatbox-inside').attr("scrollHeight");
+				$( ".chatbox-inside" ).append(botBubble+data+'</p></div></div>');
+				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
+			});
+		});
 	</script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
