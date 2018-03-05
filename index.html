@@ -4,9 +4,11 @@
 	<link rel="icon" href="media/profile.jpg" type="image/x-icon"/>
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="css/jquery-sakura.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="jquery/jquery.js"></script>
 	<script src="jquery/jquery.corner.js"></script>
+	<script src="jquery/jquery-sakura.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Corben:400,700' rel='stylesheet' type='text/css'>
@@ -225,6 +227,22 @@
 	</div>
 
 	<script>
+		$(document).ready(function() {
+		    // run test on initial page load
+		    checkSize();
+
+		    // run test on resize of the window
+		    $(window).resize(checkSize);
+		});
+
+		function checkSize() {
+		    if ($('h3').css('display') != "none" ) {
+		        $('body').sakura();
+		    } else {
+		    	$('body').sakura('stop');
+		    }
+		}
+
 		$('div .content .education').hide();
 		$('div .content .skills').hide();
 		$('div .content .experience').hide();
