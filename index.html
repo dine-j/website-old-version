@@ -230,31 +230,7 @@
 			<button class="chatbox-button" onclick="openCloseChatbox()">-</button>
 		</div>
 		<div class="chatbox-inside">
-			<div class="chatbubble">
-				<p class="user-bubble">Hey how's it going?</p>
-			</div>
-
-			<div class="chatbubble">
-				<div class="bot-bubble">
-					<img class="bot-pic" src="media/Sisilala-Overdrive-NIL-profile.png" />
-					<p class="bot-text">Just sending out random SMS to people</p>
-				</div>
-			</div>
-
-			<div class="chatbubble">
-				<p class="user-bubble">Cool, cool.</p>
-			</div>
-
-			<div class="chatbubble">
-				<div class="bot-bubble">
-					<img class="bot-pic" src="media/Sisilala-Overdrive-NIL-profile.png" />
-					<p class="bot-text">Sometimes I do that too. Like right now.</p>
-				</div>
-			</div>
-
-			<div class="chatbubble">
-				<p class="user-bubble">So how's life? Anything interesting? I'm okay just hanging around doing nothing staring out the window, thinking I should go outside but eh.</p>
-			</div>
+			
 			
 		</div>
 		<div class="chatbox-form">
@@ -315,20 +291,10 @@
 			$('div .chatbox-inside').slideToggle(400, "linear", function() {
 				$('div .chatbox-inside').height(450);
 			});
+			$('div .chatbox-form').slideToggle(400, "linear", function() {
+				$('div .chatbox-form').height(26);
+			});
 		}
-
-		// $('#submit').click(function() {
-		//     $.ajax({
-		//         url: 'http://127.0.0.1:5000/chat',
-		//         type: 'POST',
-		//         data: {
-		//             message: 'hello world!'
-		//         },
-		//         success: function(msg) {
-		//             alert('Email Sent');
-		//         }               
-		//     });
-		// });
 
 		$('#sendMessage').submit(function(event) {
 			// Stop form from submitting normally
@@ -341,10 +307,7 @@
 
 			$form.find( "input[name='message']" ).val("");
 
-			// $('.user-input-form').reset();
-
-			// $('.user-input').value = "";
-			$('.chatbox-inside').append('<div class=\"chatbubble\"><p class=\'user-bubble\'>'+msg+'</div></div>');
+			$('.chatbox-inside').append('<div class=\"chatbubble\"><p class=\'user-bubble\'>'+msg+'</p></div>');
 
 			// Send the data using post
 			var posting = $.post( url, { message: msg } );
@@ -352,8 +315,10 @@
 			var botBubble = '<div class=\"chatbubble\"><div class=\"bot-bubble\"><img class=\"bot-pic\" src=\"media/Sisilala-Overdrive-NIL-profile.png\" /><p class=\"bot-text\">'
 
 			// Put the results in a div
+			// TODO: Check if posting failed
 			posting.done(function( data ) {
-				oldscrollHeight = $('.chatbox-inside').attr("scrollHeight");
+				console.log(data);
+				data = data.replace(/(?:\r\n|\r|\n)/g, '<br />');
 				$( ".chatbox-inside" ).append(botBubble+data+'</p></div></div>');
 				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
 			});
