@@ -308,6 +308,7 @@
 			$form.find( "input[name='message']" ).val("");
 
 			$('.chatbox-inside').append('<div class=\"chatbubble\"><p class=\'user-bubble\'>'+msg+'</p></div>');
+			$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
 
 			var post = {
 			  type: 'POST',
@@ -319,6 +320,7 @@
 				}
 			};
 			var posting = $.ajax(post);
+			console.log(msg);
 
 			// Send the data using post
 			// var posting = $.post( url, { message: msg } );
@@ -331,7 +333,7 @@
 				console.log(data);
 				data = data.replace(/(?:\r\n|\r|\n)/g, '<br />');
 				$( ".chatbox-inside" ).append(botBubble+data+'</p></div></div>');
-				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
+				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
 			});
 		});
 	</script>
