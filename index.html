@@ -309,8 +309,19 @@
 
 			$('.chatbox-inside').append('<div class=\"chatbubble\"><p class=\'user-bubble\'>'+msg+'</p></div>');
 
+			var post = {
+			  type: 'POST',
+			  url: $form.attr( "action" ),
+			  crossDomain: true,
+			  data: { message: msg },
+			  xhrFields: {
+			    	withCredentials: true
+				}
+			};
+			var posting = $.ajax(post);
+
 			// Send the data using post
-			var posting = $.post( url, { message: msg } );
+			// var posting = $.post( url, { message: msg } );
 
 			var botBubble = '<div class=\"chatbubble\"><div class=\"bot-bubble\"><img class=\"bot-pic\" src=\"media/Sisilala-Overdrive-NIL-profile.png\" /><p class=\"bot-text\">'
 
