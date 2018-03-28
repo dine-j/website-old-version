@@ -331,6 +331,12 @@
 				console.log(data);
 				data = data.replace(/(?:\r\n|\r|\n)/g, '<br />');
 				$( ".chatbox-inside" ).append(botBubble+data+'</p></div></div>');
+				data = data.split(/(?:\r\n|\r|\n)/g);
+				for(i = 0; i < data.length; ++i) {
+					$( ".chatbox-inside" ).append(botBubble+data[i]+'</p></div></div>');
+					$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
+					wait(200);
+				}
 				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
 			});
 		});
