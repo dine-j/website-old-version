@@ -246,6 +246,25 @@
 		$('div .content .skills').hide();
 		$('div .content .experience').hide();
 		// $('div .chatbox-inside').hide();
+
+		var historic = {
+			  type: 'GET',
+			  url: "http://127.0.0.1:5000/chat",
+			  crossDomain: true,
+			  xhrFields: {
+			    	withCredentials: true
+				}
+			};
+		var query = $.ajax(historic);
+
+		query.done(function( data ) {
+				for (var i = 0; i < data.length; ++i) {
+					$('.chatbox-inside').append('<div class=\"chatbubble\"><p class=\'user-bubble\'>'+data[i].user+'</p></div>');
+					var botBubble = '<div class=\"chatbubble\"><div class=\"bot-bubble\"><img class=\"bot-pic\" src=\"media/Sisilala-Overdrive-NIL-profile.png\" /><p class=\"bot-text\">'
+					$( ".chatbox-inside" ).append(botBubble+data[i]+'</p></div></div>');
+				}
+				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
+			});
 		
 		function showAbout() {
 			$('button#current-section').removeAttr('id');
@@ -322,26 +341,23 @@
 			var posting = $.ajax(post);
 			console.log(msg);
 
-			// Send the data using post
-			// var posting = $.post( url, { message: msg } );
-
 			var botBubble = '<div class=\"chatbubble\"><div class=\"bot-bubble\"><img class=\"bot-pic\" src=\"media/Sisilala-Overdrive-NIL-profile.png\" /><p class=\"bot-text\">'
 
 			// Put the results in a div
 			// TODO: Check if posting failed
 			posting.done(function( data ) {
 				console.log(data);
-				// data = data.replace(/(?:\r\n|\r|\n)/g, '<br />');
-				// $( ".chatbox-inside" ).append(botBubble+data+'</p></div></div>');
 
-				data = data.split(/(?:\r\n|\r|\n)/g);
-				for(i = 0; i < data.length; ++i) {
-					$( ".chatbox-inside" ).append(botBubble+data[i]+'</p></div></div>');
-					$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
-					wait(200);
-				}
-				// $('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').height() }, 200);
-				$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
+				data = data.split("\n");
+				console.log(data);
+				var i = 0;
+				(function displayBotMessages() {
+				    $( ".chatbox-inside" ).append(botBubble+data[i]+'</p></div></div>');
+				    $('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
+				    if (++i < data.length) {
+				        setTimeout(displayBotMessages, 1500);
+				    }
+				})();
 			});
 		});
 	</script>
