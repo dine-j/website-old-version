@@ -286,21 +286,25 @@ button:focus {
 
 	.chatbox-titlebar {
 		background-color: white;
-		border-bottom: 2px solid rgb(77, 166, 255);
+		border-bottom: 2px solid black;
 		padding: 10px;
 		display: inline-flex;
 		min-width: 100%;
+		box-shadow: 0 6px 6px -5px #333;
 	}
 
 	.chatbox-title {
-		max-width: 80%;
-		margin: auto auto auto 0px !important;
+		/*color: rgb(90, 135, 255);*/
+		margin: auto auto auto 10px !important;
+		font-family: 'Chau Philomene One', sans-serif;
+	    font-size: 18;
+	    transform: scale(1.2, 1);
 	}
 
 	.chatbox-button {
-		color: rgb(77, 166, 255);
+		/*color: rgb(90, 135, 255);*/
 		font-weight: 1000;
-		border: rgb(77, 166, 255) 2px solid;
+		border: black 2px solid;
 		margin: auto 10px auto auto;
 		padding-left: 10px;
 		padding-right: 10px;
@@ -327,10 +331,11 @@ button:focus {
 
 	.user-input {
 		width: 100%;
-	}
-
-	.send-chat {
-
+		border-top: 1px solid black;
+	    border-bottom: 1px solid black;
+	    border-left: 1px solid darkgray;
+	    border-right: 1px solid darkgray;
+	    margin-right: 5px;
 	}
 
 	.chatbubble {
@@ -341,11 +346,9 @@ button:focus {
 
 	.user-bubble {
 		margin-bottom: 3px;
-		/*box-sizing: border-box;*/
 		float: right;
 		width: auto;
 		max-width: 80%;
-		/*position: relative;*/
 		font-weight: 900;
 
 		background-color: rgb(77, 166, 255);
@@ -358,6 +361,14 @@ button:focus {
 		text-shadow: 0 1px 1px rgba(0,0,0,0.8);
 		word-wrap: break-word;
 		clear:both
+	}
+
+	.msg-time {
+		text-align: center;
+		font-family: Georgia;
+	    font-weight: 600;
+	    font-size: 14;
+	    padding-top: 10px;
 	}
 
 	.bot-bubble {
@@ -391,6 +402,27 @@ button:focus {
 		margin: auto;
 	}
 
+	.send-chat {
+		font-weight: 900;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		padding: 3px 10px;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	.send-chat:hover {
+		background-color: white;
+	    -webkit-border-radius: 10px;
+	    -moz-border-radius: 10px;
+	    border-radius: 10px;
+	    padding: 3px 10px;
+	    border-color: rgb(77, 166, 255);
+	    color: rgb(57, 146, 255);
+	    font-weight: 700;
+	}
 }
 
 .bottom {
