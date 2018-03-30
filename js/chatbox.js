@@ -9,7 +9,7 @@ function getChatHistoric() {
 	};
 	var query = $.ajax(historic);
 
-	query.done(function( data ) {
+	query.done(function(data) {
 		var zone = moment.tz.guess();
 		var prevDuration;
 		var duration;
@@ -35,10 +35,21 @@ function getChatHistoric() {
 		$('.chatbox-inside').append('<div class=\"msg-time\">New messages</div>');
 		$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
 	});
+
+	if ($('.chatbox-inside').size() == 1) {
+		$('#chat-info').hide();
+	}
 }
 
 function openCloseChatbox() {
 	$('div .chatbox-inside').slideToggle(400, "linear", function() {
+		$('div .chatbox-inside').height(450);
+	});
+	$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 0);
+}
+
+function openChatbox() {
+	$('div .chatbox-inside').show(400, "linear", function() {
 		$('div .chatbox-inside').height(450);
 	});
 	$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 0);

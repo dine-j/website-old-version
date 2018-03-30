@@ -230,17 +230,18 @@
 	</div>
 
 	<div class="chatbox">
-		<div class="chatbox-titlebar">
+		<div class="chatbox-titlebar" onclick="openCloseChatbox()">
 			<p class="chatbox-title">Chatbox</p>
-			<button class="chatbox-button" onclick="openCloseChatbox()">-</button>
+			<button class="chatbox-button">-</button>
 		</div>
 		<div class="chatbox-inside">
-			
-			
+			<div id="chat-info">Talk with my personal assistant!
+			</div>
 		</div>
 		<div class="chatbox-form">
 			<form action="https://asa-bot-project.herokuapp.com/chat" method="post" class="user-input-form" id="chatbox-form">
-				<input name="message" type="text" class="user-input" autocomplete="off">
+				<input name="message" type="text" class="user-input" 
+				autocomplete="off" onclick="openChatbox()" placeholder="Questions?">
 				<input type="submit" value="Send" class="send-chat">
 			</form>
 		</div>
