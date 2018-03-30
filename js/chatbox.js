@@ -36,7 +36,7 @@ function getChatHistoric() {
 		$('.chatbox-inside').animate({ scrollTop: $('.chatbox-inside').get(0).scrollHeight }, 200);
 	});
 
-	if ($('.chatbox-inside').size() == 1) {
+	if ($('.chatbox-inside').size() > 1) {
 		$('#chat-info').hide();
 	}
 }
