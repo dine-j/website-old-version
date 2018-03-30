@@ -275,6 +275,7 @@ button:focus {
 	}
 
 	.chatbox {
+		display: block;
 		background-color: white;
 		position: absolute;
 		float: right;
