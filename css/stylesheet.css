@@ -167,6 +167,10 @@ button:focus {
 	.profile-pic-img {
 		display: none;
 	}
+
+	.chatbox {
+		display: none;
+	}
 }
 
 @media (min-width: 768px) {
