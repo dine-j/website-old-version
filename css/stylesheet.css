@@ -3,6 +3,10 @@ html, body, footer, .container {
 	min-height: 100%;
 }
 
+body {
+	overflow:overlay; 
+}
+
 @media (min-height: 640px) {
 	html, body, footer, .container {
 		height: 100%;
@@ -277,7 +281,7 @@ button:focus {
 	.chatbox {
 		display: block;
 		background-color: white;
-		position: absolute;
+		position: fixed;
 		float: right;
 		right: 40 !important;
 		bottom: 0!important;
@@ -445,6 +449,12 @@ button:focus {
 	margin-right: auto;
 	text-align: center;
 	padding: 15px;
+}
+
+.contact{
+	color: black;
+	font-size: 32px;
+	display: inline-block;
 }
 
 .show-description p {
