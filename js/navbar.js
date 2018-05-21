@@ -1,3 +1,17 @@
+function toggleNavBar() {
+ 	$('.nav-bar').toggle(300, 'linear');
+}
+
+function hideNavBar(anim) {
+	if ($('div .menu').css("display") != "none") {
+		if (anim) {
+			$('.nav-bar').hide(300, 'linear');
+		} else {
+			$('div .nav-bar').css("display", "none");
+		}
+	}
+}
+
 function showAbout() {
 	$('button#current-section').removeAttr('id');
 	$('button.about').attr('id', 'current-section');

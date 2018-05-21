@@ -110,13 +110,36 @@ button:focus {
 		margin: 20px auto auto 0px;
 		padding: 0 25px;
 	}
-	
-	.nav-bar {
-		z-index: 1;
-		display: inline-flex;
+
+	.menu {
+		z-index: 5;
 		width: 100%;
 		position: fixed;
 		top: 0;
+		right: 0;
+		width: auto;
+		border-radius: 50%;
+		border: 1px solid black;
+		margin-right: 10px;
+		margin-top: 10px;
+		padding-top: 10px;
+		padding-left: 12px;
+		padding-bottom: 10px;
+		padding-right: 12px;
+	}
+	
+	.nav-bar {
+		z-index: 1;
+		top: 75;
+		display: grid;
+		width: auto;
+		position: fixed;
+		right: 0;
+		/*margin-top: 75;*/
+	}
+
+	.nav-bar-hidden {
+		display: none;
 	}
 	
 	h3 {
@@ -126,45 +149,52 @@ button:focus {
 	button {
 		text-align: center;
 		background-color: white;
+		/*padding-bottom: 5;*/
+	}
+
+	.nav-bar button {
+		padding: 10 15 10 15;
+		border: 1px solid black;
 	}
 	
 	button.about {
-		width: 25%;
+		/*width: 25%;*/
+		border-radius: 10% 0 0 0;
 	}
 	
 	button.education {
-		width: 25%;
+		/*width: 25%;*/
+		border-top: 0;
 	}
 	
 	button.skills {
-		width: 25%;
+		/*width: 25%;*/
+		border-top: 0;
 	}
 	
 	button.experience {
-		width: 25%;
+		/*width: 25%;*/
+		border-top: 0;
+		border-radius: 0 0 0 10%;
 	}
 	
 	button.about#current-section {
 		background-color: black;
-		border-radius: 0 0 10% 0;
 		color: white;
 	}
 	
 	button.education#current-section {
 		background-color: black;
-		border-radius: 0 0 10% 10%;
 		color: white;
 	}
 	
 	button.skills#current-section {
 		background-color: black;
-		border-radius: 0 0 10% 10%;
 		color: white;
 	}
 	
 	button.experience#current-section {
 		background-color: black;
-		border-radius: 0 0 0 10%;
 		color: white;
 	}
 	
@@ -201,6 +231,10 @@ button:focus {
 		height: auto;
 		background-color: white;
 	}
+
+	.menu {
+		display: none;
+	}
 	
 	.nav-bar {
 		height: 60px;
@@ -209,6 +243,11 @@ button:focus {
 		width: 100%;
 		z-index: 0;
 		position: initial;
+	}
+
+	.nav-bar button {
+		padding: 0;
+		border: 0;
 	}
 	
 	h3 {
@@ -228,6 +267,22 @@ button:focus {
 		background-position: center bottom, center bottom;
 	}
 	
+	button.about {
+		width: 25%;
+	}
+	
+	button.education {
+		width: 25%;
+	}
+	
+	button.skills {
+		width: 25%;
+	}
+	
+	button.experience {
+		width: 25%;
+	}
+
 	button.about#current-section {
 		background-color: transparent;
 		border-radius: 0;
@@ -264,6 +319,10 @@ button:focus {
 		margin-left: 30px;
 	}
 	
+	.fas {
+		display: none !important;
+	}
+
 	.fa {
 		display: none !important;
 	}
